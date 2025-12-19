@@ -1,0 +1,83 @@
+/* [project]/app/Home.module.css [app-client] (css) */
+.Home-module__baJ6tW__container {
+  flex-direction: column;
+  gap: 48px;
+  display: flex;
+}
+
+.Home-module__baJ6tW__hero {
+  text-align: center;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.Home-module__baJ6tW__title {
+  background: linear-gradient(to right, #818cf8, #c084fc);
+  color: #0000;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin-bottom: 8px;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.Home-module__baJ6tW__subtitle {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+}
+
+.Home-module__baJ6tW__section {
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.Home-module__baJ6tW__sectionTitle {
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.Home-module__baJ6tW__grid {
+  grid-template-columns: 1fr;
+  gap: 24px;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .Home-module__baJ6tW__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.Home-module__baJ6tW__featureTitle {
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.Home-module__baJ6tW__text {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.Home-module__baJ6tW__faqItem {
+  margin-bottom: 16px;
+}
+
+.Home-module__baJ6tW__faqQuestion {
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=app_Home_module_579cdefa.css.map*/

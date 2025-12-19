@@ -1,0 +1,39 @@
+/* [project]/src/components/Footer.module.css [app-client] (css) */
+.Footer-module__S6Hkya__footer {
+  border-top: 1px solid var(--glass-border);
+  background: var(--bg-secondary);
+  margin-top: auto;
+  padding: 40px 0;
+}
+
+.Footer-module__S6Hkya__container {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+}
+
+.Footer-module__S6Hkya__text {
+  color: var(--text-muted);
+  font-size: .875rem;
+}
+
+.Footer-module__S6Hkya__links {
+  gap: 24px;
+  display: flex;
+}
+
+.Footer-module__S6Hkya__link {
+  color: var(--text-muted);
+  font-size: .875rem;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.Footer-module__S6Hkya__link:hover {
+  color: var(--text-primary);
+}
+
+/*# sourceMappingURL=src_components_Footer_module_css_bad6b30c._.single.css.map*/

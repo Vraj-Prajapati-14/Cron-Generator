@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/Header.module.css"],"sourcesContent":[".header {\r\n    width: 100%;\r\n    border-bottom: 1px solid var(--glass-border);\r\n    background: var(--glass-bg);\r\n    backdrop-filter: blur(12px);\r\n    position: sticky;\r\n    top: 0;\r\n    z-index: 50;\r\n}\r\n\r\n.container {\r\n    max-width: 1400px;\r\n    margin: 0 auto;\r\n    padding: 0 20px;\r\n    height: 64px;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: space-between;\r\n}\r\n\r\n.logo {\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 8px;\r\n    font-weight: 700;\r\n    font-size: 1.25rem;\r\n    color: var(--accent-primary);\r\n    text-decoration: none;\r\n}\r\n\r\n.nav {\r\n    display: flex;\r\n    gap: 24px;\r\n}\r\n\r\n.navLink {\r\n    color: var(--text-secondary);\r\n    font-size: 0.875rem;\r\n    font-weight: 500;\r\n    transition: color 0.2s;\r\n    text-decoration: none;\r\n}\r\n\r\n.navLink:hover {\r\n    color: var(--text-primary);\r\n}\r\n\r\n"],"names":[],"mappings":"AAAA;;;;;;;;;;;AAUA;;;;;;;;;;AAUA;;;;;;;;;;AAUA;;;;;AAKA;;;;;;;;AAQA"}}]
+}

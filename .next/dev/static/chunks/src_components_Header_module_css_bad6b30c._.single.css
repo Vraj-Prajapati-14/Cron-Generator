@@ -1,0 +1,50 @@
+/* [project]/src/components/Header.module.css [app-client] (css) */
+.Header-module__hBw1pG__header {
+  border-bottom: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  z-index: 50;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+.Header-module__hBw1pG__container {
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  height: 64px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+}
+
+.Header-module__hBw1pG__logo {
+  color: var(--accent-primary);
+  align-items: center;
+  gap: 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+}
+
+.Header-module__hBw1pG__nav {
+  gap: 24px;
+  display: flex;
+}
+
+.Header-module__hBw1pG__navLink {
+  color: var(--text-secondary);
+  font-size: .875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color .2s;
+}
+
+.Header-module__hBw1pG__navLink:hover {
+  color: var(--text-primary);
+}
+
+/*# sourceMappingURL=src_components_Header_module_css_bad6b30c._.single.css.map*/
