@@ -395,11 +395,14 @@ function CronTool() {
         }
         return description;
     };
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].container,
+        "aria-label": "Cron Expression Generator",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].toolbar,
+                role: "toolbar",
+                "aria-label": "Cron generator actions",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].actions,
                     children: [
@@ -407,14 +410,27 @@ function CronTool() {
                             onClick: handleClear,
                             className: "btn btn-secondary",
                             title: "Clear All",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
-                                size: 18
-                            }, void 0, false, {
-                                fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 136,
-                                columnNumber: 25
-                            }, this)
-                        }, void 0, false, {
+                            "aria-label": "Clear all cron expression fields",
+                            type: "button",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$trash$2d$2$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Trash2$3e$__["Trash2"], {
+                                    size: 18,
+                                    "aria-hidden": "true"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/CronTool.tsx",
+                                    lineNumber: 142,
+                                    columnNumber: 25
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "sr-only",
+                                    children: "Clear All"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/CronTool.tsx",
+                                    lineNumber: 143,
+                                    columnNumber: 25
+                                }, this)
+                            ]
+                        }, void 0, true, {
                             fileName: "[project]/components/CronTool.tsx",
                             lineNumber: 135,
                             columnNumber: 21
@@ -423,19 +439,28 @@ function CronTool() {
                             onClick: handleCopy,
                             className: "btn btn-primary",
                             title: "Copy Cron Expression",
+                            "aria-label": "Copy cron expression to clipboard",
+                            type: "button",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$copy$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Copy$3e$__["Copy"], {
-                                    size: 18
+                                    size: 18,
+                                    "aria-hidden": "true"
                                 }, void 0, false, {
                                     fileName: "[project]/components/CronTool.tsx",
-                                    lineNumber: 139,
+                                    lineNumber: 152,
                                     columnNumber: 25
                                 }, this),
-                                " Copy"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    children: "Copy"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/CronTool.tsx",
+                                    lineNumber: 153,
+                                    columnNumber: 25
+                                }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/components/CronTool.tsx",
-                            lineNumber: 138,
+                            lineNumber: 145,
                             columnNumber: 21
                         }, this)
                     ]
@@ -454,170 +479,241 @@ function CronTool() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].builderSection,
+                        role: "group",
+                        "aria-labelledby": "builder-title",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                id: "builder-title",
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sectionTitle,
                                 children: "Cron Builder"
                             }, void 0, false, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 146,
+                                lineNumber: 160,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldGroup,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        htmlFor: "minute-field",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldLabel,
                                         children: "Minute (0-59)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 162,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        id: "minute-field",
                                         type: "text",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldInput,
                                         value: minute,
                                         onChange: (e)=>setMinute(e.target.value),
-                                        placeholder: "0"
+                                        placeholder: "0",
+                                        "aria-describedby": "minute-help",
+                                        "aria-label": "Minute field for cron expression"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 149,
+                                        lineNumber: 163,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        id: "minute-help",
+                                        className: "sr-only",
+                                        children: "Enter minute value from 0 to 59, or use * for every minute"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/CronTool.tsx",
+                                        lineNumber: 173,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 147,
+                                lineNumber: 161,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldGroup,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        htmlFor: "hour-field",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldLabel,
                                         children: "Hour (0-23)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 158,
+                                        lineNumber: 176,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        id: "hour-field",
                                         type: "text",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldInput,
                                         value: hour,
                                         onChange: (e)=>setHour(e.target.value),
-                                        placeholder: "0"
+                                        placeholder: "0",
+                                        "aria-describedby": "hour-help",
+                                        "aria-label": "Hour field for cron expression"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 159,
+                                        lineNumber: 177,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        id: "hour-help",
+                                        className: "sr-only",
+                                        children: "Enter hour value from 0 to 23, or use * for every hour"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/CronTool.tsx",
+                                        lineNumber: 187,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 157,
+                                lineNumber: 175,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldGroup,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        htmlFor: "day-of-month-field",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldLabel,
                                         children: "Day of Month (1-31)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 168,
+                                        lineNumber: 190,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        id: "day-of-month-field",
                                         type: "text",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldInput,
                                         value: dayOfMonth,
                                         onChange: (e)=>setDayOfMonth(e.target.value),
-                                        placeholder: "*"
+                                        placeholder: "*",
+                                        "aria-describedby": "day-of-month-help",
+                                        "aria-label": "Day of month field for cron expression"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 169,
+                                        lineNumber: 191,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        id: "day-of-month-help",
+                                        className: "sr-only",
+                                        children: "Enter day of month from 1 to 31, or use * for every day"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/CronTool.tsx",
+                                        lineNumber: 201,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 167,
+                                lineNumber: 189,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldGroup,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        htmlFor: "month-field",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldLabel,
                                         children: "Month (1-12)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 178,
+                                        lineNumber: 204,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        id: "month-field",
                                         type: "text",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldInput,
                                         value: month,
                                         onChange: (e)=>setMonth(e.target.value),
-                                        placeholder: "*"
+                                        placeholder: "*",
+                                        "aria-describedby": "month-help",
+                                        "aria-label": "Month field for cron expression"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 179,
+                                        lineNumber: 205,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        id: "month-help",
+                                        className: "sr-only",
+                                        children: "Enter month value from 1 to 12, or use * for every month"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/CronTool.tsx",
+                                        lineNumber: 215,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 177,
+                                lineNumber: 203,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldGroup,
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("label", {
+                                        htmlFor: "day-of-week-field",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldLabel,
                                         children: "Day of Week (0-7, 0 or 7 = Sunday)"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 218,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        id: "day-of-week-field",
                                         type: "text",
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].fieldInput,
                                         value: dayOfWeek,
                                         onChange: (e)=>setDayOfWeek(e.target.value),
-                                        placeholder: "*"
+                                        placeholder: "*",
+                                        "aria-describedby": "day-of-week-help",
+                                        "aria-label": "Day of week field for cron expression"
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 189,
+                                        lineNumber: 219,
+                                        columnNumber: 25
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        id: "day-of-week-help",
+                                        className: "sr-only",
+                                        children: "Enter day of week from 0 to 7 (0 and 7 are Sunday), or use * for every day"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/CronTool.tsx",
+                                        lineNumber: 229,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 187,
+                                lineNumber: 217,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/CronTool.tsx",
-                        lineNumber: 145,
+                        lineNumber: 159,
                         columnNumber: 17
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].inputSection,
+                        role: "group",
+                        "aria-labelledby": "expression-title",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                id: "expression-title",
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].sectionTitle,
                                 children: "Cron Expression"
                             }, void 0, false, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 200,
+                                lineNumber: 234,
                                 columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -625,47 +721,84 @@ function CronTool() {
                                 className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].cronInput, !isValid && __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statusError),
                                 value: cronExpression,
                                 onChange: (e)=>handleExpressionChange(e.target.value),
-                                placeholder: "0 0 * * *"
+                                placeholder: "0 0 * * *",
+                                "aria-label": "Cron expression input",
+                                "aria-describedby": "cron-status cron-description",
+                                "aria-invalid": !isValid
                             }, void 0, false, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 201,
+                                lineNumber: 235,
                                 columnNumber: 21
                             }, this),
-                            status.message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].status, status.type === "error" ? __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statusError : __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statusSuccess),
-                                children: [
-                                    status.type === "error" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$triangle$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertTriangle$3e$__["AlertTriangle"], {
-                                        size: 18,
-                                        style: {
-                                            display: 'inline',
-                                            marginRight: 8
-                                        }
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 211,
-                                        columnNumber: 56
-                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
-                                        size: 18,
-                                        style: {
-                                            display: 'inline',
-                                            marginRight: 8
-                                        }
-                                    }, void 0, false, {
-                                        fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 211,
-                                        columnNumber: 132
-                                    }, this),
-                                    status.message
-                                ]
-                            }, void 0, true, {
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                id: "cron-status",
+                                role: "status",
+                                "aria-live": "polite",
+                                "aria-atomic": "true",
+                                children: status.message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$clsx$2f$dist$2f$clsx$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].status, status.type === "error" ? __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statusError : __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].statusSuccess),
+                                    children: status.type === "error" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$triangle$2d$alert$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__AlertTriangle$3e$__["AlertTriangle"], {
+                                                size: 18,
+                                                style: {
+                                                    display: 'inline',
+                                                    marginRight: 8
+                                                },
+                                                "aria-hidden": "true"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/CronTool.tsx",
+                                                lineNumber: 250,
+                                                columnNumber: 41
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: status.message
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/CronTool.tsx",
+                                                lineNumber: 251,
+                                                columnNumber: 41
+                                            }, this)
+                                        ]
+                                    }, void 0, true) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$circle$2d$check$2d$big$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__CheckCircle$3e$__["CheckCircle"], {
+                                                size: 18,
+                                                style: {
+                                                    display: 'inline',
+                                                    marginRight: 8
+                                                },
+                                                "aria-hidden": "true"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/CronTool.tsx",
+                                                lineNumber: 255,
+                                                columnNumber: 41
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                children: status.message
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/CronTool.tsx",
+                                                lineNumber: 256,
+                                                columnNumber: 41
+                                            }, this)
+                                        ]
+                                    }, void 0, true)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/CronTool.tsx",
+                                    lineNumber: 247,
+                                    columnNumber: 29
+                                }, this)
+                            }, void 0, false, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 210,
-                                columnNumber: 25
+                                lineNumber: 245,
+                                columnNumber: 21
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                id: "cron-description",
                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].description,
+                                role: "region",
+                                "aria-label": "Cron expression description",
                                 children: [
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].descriptionTitle,
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"], {
@@ -674,43 +807,45 @@ function CronTool() {
                                                     display: 'inline',
                                                     marginRight: 8,
                                                     verticalAlign: 'middle'
-                                                }
+                                                },
+                                                "aria-hidden": "true"
                                             }, void 0, false, {
                                                 fileName: "[project]/components/CronTool.tsx",
-                                                lineNumber: 218,
+                                                lineNumber: 265,
                                                 columnNumber: 29
                                             }, this),
                                             "Description"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 217,
+                                        lineNumber: 264,
                                         columnNumber: 25
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                         className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$module$2e$css__$5b$app$2d$ssr$5d$__$28$css__module$29$__["default"].descriptionText,
+                                        "aria-live": "polite",
                                         children: getDescription(cronExpression)
                                     }, void 0, false, {
                                         fileName: "[project]/components/CronTool.tsx",
-                                        lineNumber: 221,
+                                        lineNumber: 268,
                                         columnNumber: 25
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/CronTool.tsx",
-                                lineNumber: 216,
+                                lineNumber: 263,
                                 columnNumber: 21
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/CronTool.tsx",
-                        lineNumber: 199,
+                        lineNumber: 233,
                         columnNumber: 17
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/CronTool.tsx",
-                lineNumber: 144,
+                lineNumber: 158,
                 columnNumber: 13
             }, this)
         ]

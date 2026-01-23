@@ -3,14 +3,35 @@ import { Metadata } from 'next';
 import { Clock, Shield, Zap, Eye, Copy, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Features | Cron Generator Online Tool',
-  description: 'Explore all features of our free online cron generator. Visual builder, real-time validation, plain English descriptions, and more.',
+  title: 'Features | Cron Generator Online Tool - All Features Explained',
+  description: 'Explore all features of our free online cron generator. Visual builder, real-time validation, plain English descriptions, secure client-side processing, and more. See why developers choose our cron tool.',
+  keywords: [
+    'cron generator features', 'cron tool features', 'cron builder features', 'cron generator capabilities', 'cron tool benefits',
+    'cron generator advantages', 'cron tool advantages', 'cron builder advantages', 'cron generator tools', 'cron tool tools',
+    'visual cron builder', 'cron expression validator', 'cron syntax checker', 'cron expression generator', 'cron expression builder',
+    'real-time cron validation', 'cron expression description', 'plain english cron', 'cron expression interpreter', 'cron expression parser',
+    'secure cron generator', 'client-side cron', 'privacy cron tool', 'free cron generator', 'online cron generator',
+    'cron generator without registration', 'cron tool no signup', 'cron builder free', 'cron generator instant', 'cron tool fast',
+  ].join(', '),
   alternates: {
     canonical: 'https://www.crongenerator.online/features',
+  },
+  openGraph: {
+    title: 'Features | Cron Generator Online Tool',
+    description: 'Explore all features of our free online cron generator. Visual builder, real-time validation, plain English descriptions, and more.',
+    url: 'https://www.crongenerator.online/features',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Features | Cron Generator Online Tool',
+    description: 'Explore all features of our free online cron generator.',
   },
 };
 
 export default function FeaturesPage() {
+  const baseUrl = 'https://www.crongenerator.online';
+  
   const features = [
     {
       icon: <Clock size={32} />,
@@ -44,8 +65,48 @@ export default function FeaturesPage() {
     },
   ];
 
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'Cron Generator Features',
+    description: 'Explore all features of our free online cron generator tool.',
+    itemListElement: features.map((feature, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: feature.title,
+      description: feature.description,
+    })),
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Features',
+        item: `${baseUrl}/features`,
+      },
+    ],
+  };
+
   return (
     <div className={styles.container}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className={styles.hero}>
         <h1 className={styles.title}>Features</h1>
         <p className={styles.subtitle}>

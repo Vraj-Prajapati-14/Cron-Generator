@@ -3,16 +3,70 @@ import { Metadata } from 'next';
 import { Mail, MessageSquare, Clock } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | Cron Generator',
-  description: 'Get in touch with the Cron Generator team. We\'d love to hear from you.',
+  title: 'Contact Us | Cron Generator - Get in Touch',
+  description: 'Get in touch with the Cron Generator team. We\'d love to hear from you. Have questions, feedback, or suggestions? Contact us for support and inquiries.',
+  keywords: [
+    'cron generator contact', 'cron tool contact', 'cron builder contact', 'cron generator support',
+    'cron tool support', 'cron builder support', 'cron generator help', 'cron tool help', 'cron builder help',
+    'cron generator feedback', 'cron tool feedback', 'cron builder feedback', 'cron generator email',
+    'cron tool email', 'cron builder email', 'cron generator inquiry', 'cron tool inquiry', 'cron builder inquiry',
+  ].join(', '),
   alternates: {
     canonical: 'https://www.crongenerator.online/contact',
+  },
+  openGraph: {
+    title: 'Contact Us | Cron Generator',
+    description: 'Get in touch with the Cron Generator team. We\'d love to hear from you.',
+    url: 'https://www.crongenerator.online/contact',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Contact Us | Cron Generator',
+    description: 'Get in touch with the Cron Generator team.',
   },
 };
 
 export default function ContactPage() {
+  const baseUrl = 'https://www.crongenerator.online';
+
+  const contactPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ContactPage',
+    name: 'Contact Us | Cron Generator',
+    description: 'Get in touch with the Cron Generator team. We\'d love to hear from you.',
+    url: `${baseUrl}/contact`,
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Contact',
+        item: `${baseUrl}/contact`,
+      },
+    ],
+  };
+
   return (
     <div className={styles.container}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className={styles.hero}>
         <h1 className={styles.title}>Contact Us</h1>
         <p className={styles.subtitle}>

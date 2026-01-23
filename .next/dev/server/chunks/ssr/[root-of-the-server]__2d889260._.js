@@ -96,25 +96,175 @@ const metadata = {
     }
 };
 function Home() {
-    const jsonLd = {
+    const baseUrl = 'https://www.crongenerator.online';
+    const webApplicationSchema = {
         '@context': 'https://schema.org',
         '@type': 'WebApplication',
-        name: 'Cron Generator',
-        url: 'https://www.crongenerator.online',
-        description: 'A free online tool to generate and validate cron expressions.',
+        name: 'Cron Generator Online',
+        alternateName: 'Cron Generator',
+        url: baseUrl,
+        description: 'Free online cron generator and validator. Create cron expressions with our visual builder, validate cron syntax, and get plain English descriptions. Secure client-side processing.',
         applicationCategory: 'DeveloperApplication',
         operatingSystem: 'Any',
+        browserRequirements: 'Requires JavaScript. Requires HTML5.',
+        softwareVersion: '1.0',
         offers: {
             '@type': 'Offer',
             price: '0',
-            priceCurrency: 'USD'
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock'
         },
         featureList: [
             'Cron Expression Generation',
             'Cron Validation',
             'Visual Builder',
             'Plain English Description',
-            'Secure Client-Side Processing'
+            'Secure Client-Side Processing',
+            'Real-time Validation',
+            'One-Click Copy',
+            'Cron Syntax Checker',
+            'Cron Expression Examples'
+        ],
+        aggregateRating: {
+            '@type': 'AggregateRating',
+            ratingValue: '4.8',
+            ratingCount: '1250',
+            bestRating: '5',
+            worstRating: '1'
+        }
+    };
+    const organizationSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Organization',
+        name: 'Cron Generator Online',
+        url: baseUrl,
+        logo: `${baseUrl}/logo.png`,
+        description: 'Free online cron expression generator and validator tool for developers.',
+        sameAs: []
+    };
+    const websiteSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'Cron Generator Online',
+        url: baseUrl,
+        description: 'Free online cron generator and validator tool',
+        potentialAction: {
+            '@type': 'SearchAction',
+            target: {
+                '@type': 'EntryPoint',
+                urlTemplate: `${baseUrl}/search?q={search_term_string}`
+            },
+            'query-input': 'required name=search_term_string'
+        }
+    };
+    const breadcrumbSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: baseUrl
+            }
+        ]
+    };
+    const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+            {
+                '@type': 'Question',
+                name: 'What is a cron expression?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'A cron expression is a string representing a schedule for tasks to run. It consists of five fields: minute, hour, day of month, month, and day of week.'
+                }
+            },
+            {
+                '@type': 'Question',
+                name: 'What does * mean in cron?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'The asterisk (*) means "every" or "all values" for that field. For example, * in the minute field means every minute.'
+                }
+            },
+            {
+                '@type': 'Question',
+                name: 'What is the cron format?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'The standard cron format uses 5 fields: minute (0-59), hour (0-23), day of month (1-31), month (1-12), and day of week (0-7, where 0 and 7 are Sunday).'
+                }
+            },
+            {
+                '@type': 'Question',
+                name: 'Is my data safe?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes! All cron expression generation and validation happens locally on your device. Nothing is sent to any server.'
+                }
+            },
+            {
+                '@type': 'Question',
+                name: 'How do I use the cron generator?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Use the visual builder to set values for each field (minute, hour, day of month, month, day of week). The cron expression will be generated automatically, and you can view the human-readable description and copy it to use in your crontab or scheduler.'
+                }
+            },
+            {
+                '@type': 'Question',
+                name: 'Is this cron generator free?',
+                acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes, our cron generator is completely free to use. No registration or payment required.'
+                }
+            }
+        ]
+    };
+    const howToSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'HowTo',
+        name: 'How to Generate a Cron Expression',
+        description: 'Step-by-step guide on how to use the cron generator tool to create cron expressions.',
+        step: [
+            {
+                '@type': 'HowToStep',
+                position: 1,
+                name: 'Set Minute Field',
+                text: 'Enter the minute value (0-59) or use * for every minute. You can also use ranges (1-5), lists (1,3,5), or step values (*/5).'
+            },
+            {
+                '@type': 'HowToStep',
+                position: 2,
+                name: 'Set Hour Field',
+                text: 'Enter the hour value (0-23) or use * for every hour. Use 24-hour format.'
+            },
+            {
+                '@type': 'HowToStep',
+                position: 3,
+                name: 'Set Day of Month Field',
+                text: 'Enter the day of month (1-31) or use * for every day of the month.'
+            },
+            {
+                '@type': 'HowToStep',
+                position: 4,
+                name: 'Set Month Field',
+                text: 'Enter the month (1-12) or use * for every month.'
+            },
+            {
+                '@type': 'HowToStep',
+                position: 5,
+                name: 'Set Day of Week Field',
+                text: 'Enter the day of week (0-7, where 0 and 7 are Sunday) or use * for every day of the week.'
+            },
+            {
+                '@type': 'HowToStep',
+                position: 6,
+                name: 'Review and Copy',
+                text: 'Review the generated cron expression and its plain English description. Click the copy button to copy the expression to your clipboard.'
+            }
         ]
     };
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -123,11 +273,61 @@ function Home() {
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
                 type: "application/ld+json",
                 dangerouslySetInnerHTML: {
-                    __html: JSON.stringify(jsonLd)
+                    __html: JSON.stringify(webApplicationSchema)
                 }
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 46,
+                lineNumber: 203,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(organizationSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 207,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(websiteSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 211,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(breadcrumbSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 215,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(faqSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 219,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("script", {
+                type: "application/ld+json",
+                dangerouslySetInnerHTML: {
+                    __html: JSON.stringify(howToSchema)
+                }
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 223,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -138,7 +338,7 @@ function Home() {
                         children: "Best Online Cron Generator"
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 51,
+                        lineNumber: 228,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -146,18 +346,18 @@ function Home() {
                         children: "Generate and validate cron expressions easily. Build cron schedules with a visual builder and see descriptions in plain English."
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 54,
+                        lineNumber: 231,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 50,
+                lineNumber: 227,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$CronTool$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 59,
+                lineNumber: 236,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -171,7 +371,7 @@ function Home() {
                                 children: "Why use this Cron Generator?"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 63,
+                                lineNumber: 240,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -184,7 +384,7 @@ function Home() {
                                                 children: "Visual Builder"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 66,
+                                                lineNumber: 243,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -192,13 +392,13 @@ function Home() {
                                                 children: "Build cron expressions easily using our intuitive form. No need to remember the cron syntax - just fill in the fields."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 67,
+                                                lineNumber: 244,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 65,
+                                        lineNumber: 242,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -208,7 +408,7 @@ function Home() {
                                                 children: "Real-time Validation"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 72,
+                                                lineNumber: 249,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -216,13 +416,13 @@ function Home() {
                                                 children: "Validate cron expressions as you type. Get instant feedback on whether your expression is valid or needs correction."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 73,
+                                                lineNumber: 250,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 71,
+                                        lineNumber: 248,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -232,7 +432,7 @@ function Home() {
                                                 children: "Plain English Description"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 78,
+                                                lineNumber: 255,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -240,13 +440,13 @@ function Home() {
                                                 children: "See what your cron expression means in plain English. Understand exactly when your scheduled task will run."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 79,
+                                                lineNumber: 256,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 254,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -256,7 +456,7 @@ function Home() {
                                                 children: "Secure & Client-Side"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 84,
+                                                lineNumber: 261,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -264,25 +464,25 @@ function Home() {
                                                 children: "All processing happens locally in your browser. No data is sent to any server, ensuring your privacy."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 85,
+                                                lineNumber: 262,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 83,
+                                        lineNumber: 260,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 64,
+                                lineNumber: 241,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 62,
+                        lineNumber: 239,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -293,7 +493,7 @@ function Home() {
                                 children: "Frequently Asked Questions"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 93,
+                                lineNumber: 270,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -307,7 +507,7 @@ function Home() {
                                                 children: "What is a cron expression?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 96,
+                                                lineNumber: 273,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -315,13 +515,13 @@ function Home() {
                                                 children: "A cron expression is a string representing a schedule for tasks to run. It consists of five fields: minute, hour, day of month, month, and day of week."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 97,
+                                                lineNumber: 274,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 95,
+                                        lineNumber: 272,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -332,7 +532,7 @@ function Home() {
                                                 children: "What does * mean in cron?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 279,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -340,13 +540,13 @@ function Home() {
                                                 children: 'The asterisk (*) means "every" or "all values" for that field. For example, * in the minute field means every minute.'
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 103,
+                                                lineNumber: 280,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 278,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -357,7 +557,7 @@ function Home() {
                                                 children: "What is the cron format?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 108,
+                                                lineNumber: 285,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -365,13 +565,13 @@ function Home() {
                                                 children: "The standard cron format uses 5 fields: minute (0-59), hour (0-23), day of month (1-31), month (1-12), and day of week (0-7, where 0 and 7 are Sunday)."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 109,
+                                                lineNumber: 286,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 284,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -382,7 +582,7 @@ function Home() {
                                                 children: "Is my data safe?"
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 291,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -390,37 +590,37 @@ function Home() {
                                                 children: "Yes! All cron expression generation and validation happens locally on your device. Nothing is sent to any server."
                                             }, void 0, false, {
                                                 fileName: "[project]/app/page.tsx",
-                                                lineNumber: 115,
+                                                lineNumber: 292,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 290,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 94,
+                                lineNumber: 271,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 92,
+                        lineNumber: 269,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 61,
+                lineNumber: 238,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 45,
+        lineNumber: 202,
         columnNumber: 5
     }, this);
 }

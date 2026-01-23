@@ -2,14 +2,36 @@ import styles from '../Home.module.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Cron Expression Examples | Common Cron Schedules',
-  description: 'Common cron expression examples for various scheduling needs. Copy and use these cron expressions for your tasks.',
+  title: 'Cron Expression Examples | Common Cron Schedules & Patterns',
+  description: 'Common cron expression examples for various scheduling needs. Copy and use these cron expressions for your tasks. Includes examples for daily, weekly, monthly, and custom schedules.',
+  keywords: [
+    'cron examples', 'common cron schedules', 'cron expression examples', 'cron schedule examples', 'cron pattern examples',
+    'cron job examples', 'crontab examples', 'cron expression samples', 'cron expression templates', 'cron expression patterns',
+    'daily cron expression', 'weekly cron expression', 'monthly cron expression', 'hourly cron expression', 'cron every minute',
+    'cron every hour', 'cron every day', 'cron every week', 'cron every month', 'cron weekday', 'cron weekend',
+    'cron midnight', 'cron noon', 'cron expression for backup', 'cron expression for email', 'cron expression for cleanup',
+    'cron expression for reports', 'cron expression for maintenance', 'cron expression for database', 'cron expression for script',
+    'cron expression for task', 'cron expression for job', 'cron expression for automation', 'cron expression for scheduler',
+  ].join(', '),
   alternates: {
     canonical: 'https://www.crongenerator.online/examples',
+  },
+  openGraph: {
+    title: 'Cron Expression Examples | Common Cron Schedules',
+    description: 'Common cron expression examples for various scheduling needs. Copy and use these cron expressions for your tasks.',
+    url: 'https://www.crongenerator.online/examples',
+    type: 'article',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cron Expression Examples | Common Cron Schedules',
+    description: 'Common cron expression examples for various scheduling needs.',
   },
 };
 
 export default function ExamplesPage() {
+  const baseUrl = 'https://www.crongenerator.online';
+  
   const examples = [
     { expression: '* * * * *', description: 'Every minute' },
     { expression: '0 * * * *', description: 'Every hour (at minute 0)' },
@@ -29,8 +51,52 @@ export default function ExamplesPage() {
     { expression: '0 0 15 * *', description: '15th of every month at midnight' },
   ];
 
+  const collectionPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Cron Expression Examples',
+    description: 'Common cron expression examples for various scheduling needs. Copy and use these cron expressions for your tasks.',
+    url: `${baseUrl}/examples`,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: examples.map((example, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: example.expression,
+        description: example.description,
+      })),
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Examples',
+        item: `${baseUrl}/examples`,
+      },
+    ],
+  };
+
   return (
     <div className={styles.container}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className={styles.hero}>
         <h1 className={styles.title}>Cron Expression Examples</h1>
         <p className={styles.subtitle}>

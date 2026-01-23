@@ -1,4 +1,9 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/examples/page": "app/examples/page.js",
+  "/features/page": "app/features/page.js",
+  "/guide/page": "app/guide/page.js",
+  "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/page": "app/page.js",
-  "/privacy/page": "app/privacy/page.js"
+  "/reference/page": "app/reference/page.js"
 }

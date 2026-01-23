@@ -2,16 +2,57 @@ import styles from '../Home.module.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Cron Generator',
-  description: 'Privacy policy for Cron Generator. Learn how we handle your data and protect your privacy.',
+  title: 'Privacy Policy | Cron Generator - Your Privacy Matters',
+  description: 'Privacy policy for Cron Generator. Learn how we handle your data and protect your privacy. All processing happens client-side - your data never leaves your device.',
+  keywords: [
+    'cron generator privacy', 'cron tool privacy policy', 'cron builder privacy', 'cron generator data protection',
+    'cron tool security', 'cron generator privacy policy', 'cron tool privacy', 'cron builder privacy policy',
+    'secure cron generator', 'private cron tool', 'client-side cron', 'cron generator no data collection',
+    'cron tool data privacy', 'cron generator GDPR', 'cron tool secure', 'cron builder safe', 'cron generator confidential',
+  ].join(', '),
   alternates: {
     canonical: 'https://www.crongenerator.online/privacy',
+  },
+  openGraph: {
+    title: 'Privacy Policy | Cron Generator',
+    description: 'Privacy policy for Cron Generator. Learn how we handle your data and protect your privacy.',
+    url: 'https://www.crongenerator.online/privacy',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function PrivacyPage() {
+  const baseUrl = 'https://www.crongenerator.online';
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Privacy Policy',
+        item: `${baseUrl}/privacy`,
+      },
+    ],
+  };
+
   return (
     <div className={styles.container}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className={styles.hero}>
         <h1 className={styles.title}>Privacy Policy</h1>
         <p className={styles.subtitle}>

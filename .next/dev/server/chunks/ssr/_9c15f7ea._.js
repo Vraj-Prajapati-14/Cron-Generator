@@ -132,9 +132,11 @@ function Footer() {
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                     href: "/",
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].logo,
+                                    "aria-label": "Cron Generator Online - Home",
                                     children: [
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$clock$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Clock$3e$__["Clock"], {
-                                            size: 24
+                                            size: 24,
+                                            "aria-hidden": "true"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Footer.tsx",
                                             lineNumber: 32,
@@ -167,10 +169,12 @@ function Footer() {
                             lineNumber: 30,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksSection,
+                            "aria-labelledby": "product-links",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    id: "product-links",
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksTitle,
                                     children: "Product"
                                 }, void 0, false, {
@@ -180,10 +184,13 @@ function Footer() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksList,
+                                    role: "list",
                                     children: productLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            role: "listitem",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                                 href: link.href,
                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].link,
+                                                "aria-label": `Navigate to ${link.label}`,
                                                 children: link.label
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
@@ -206,10 +213,12 @@ function Footer() {
                             lineNumber: 40,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksSection,
+                            "aria-labelledby": "resources-links",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    id: "resources-links",
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksTitle,
                                     children: "Resources"
                                 }, void 0, false, {
@@ -219,10 +228,13 @@ function Footer() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksList,
+                                    role: "list",
                                     children: resourceLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            role: "listitem",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                                 href: link.href,
                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].link,
+                                                "aria-label": `Navigate to ${link.label}`,
                                                 children: link.label
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
@@ -245,10 +257,12 @@ function Footer() {
                             lineNumber: 53,
                             columnNumber: 21
                         }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
                             className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksSection,
+                            "aria-labelledby": "legal-links",
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h4", {
+                                    id: "legal-links",
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksTitle,
                                     children: "Legal"
                                 }, void 0, false, {
@@ -258,10 +272,13 @@ function Footer() {
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                                     className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].linksList,
+                                    role: "list",
                                     children: legalLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                                            role: "listitem",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                                                 href: link.href,
                                                 className: __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$module$2e$css__$5b$app$2d$rsc$5d$__$28$css__module$29$__["default"].link,
+                                                "aria-label": `Navigate to ${link.label}`,
                                                 children: link.label
                                             }, void 0, false, {
                                                 fileName: "[project]/components/Footer.tsx",
@@ -338,14 +355,206 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx_
 ;
 ;
 ;
+const baseUrl = 'https://www.crongenerator.online';
+const siteName = 'Cron Generator Online';
+const defaultTitle = 'Best Online Cron Generator | Create & Validate Cron Expressions';
+const defaultDescription = 'Free online cron generator and validator. Create cron expressions with our visual builder, validate cron syntax, and get plain English descriptions. Secure client-side processing. No registration required.';
 const metadata = {
-    title: 'Best Online Cron Generator | Create & Validate Cron Expressions',
-    description: 'Generate and validate cron expressions easily. Build cron schedules with a visual builder and see descriptions in plain English. Secure, client-side processing.',
-    keywords: 'cron generator, cron expression, cron validator, cron builder, schedule generator, cron job, crontab',
+    metadataBase: new URL(baseUrl),
+    title: {
+        default: defaultTitle,
+        template: `%s | ${siteName}`
+    },
+    description: defaultDescription,
+    keywords: [
+        // Primary keywords
+        'cron generator',
+        'cron expression generator',
+        'cron job generator',
+        'crontab generator',
+        'cron schedule generator',
+        // Secondary keywords
+        'cron validator',
+        'cron builder',
+        'schedule generator',
+        'task scheduler',
+        'cron syntax',
+        'cron expression builder',
+        'cron expression validator',
+        'cron maker',
+        'cron creator',
+        'cron tool',
+        'cron utility',
+        'cron helper',
+        // Long-tail keywords
+        'free online cron generator',
+        'cron expression builder tool',
+        'validate cron expression online',
+        'create cron expression',
+        'build cron expression',
+        'generate cron schedule',
+        'cron expression maker online',
+        'online cron builder',
+        'cron expression generator tool',
+        'free cron expression generator',
+        'cron job builder',
+        'cron schedule builder',
+        'cron expression creator',
+        'cron syntax generator',
+        'cron pattern generator',
+        'cron format generator',
+        // Technical keywords
+        'unix cron',
+        'linux cron',
+        'cron format',
+        'cron schedule',
+        'cron pattern',
+        'cron syntax checker',
+        'cron expression syntax',
+        'cron job syntax',
+        'crontab syntax',
+        'cron field',
+        'cron special characters',
+        'cron asterisk',
+        'cron comma',
+        'cron hyphen',
+        'cron slash',
+        'cron step values',
+        'cron range',
+        // Question-based keywords
+        'how to create cron expression',
+        'how to write cron expression',
+        'how to use cron',
+        'what is cron expression',
+        'cron expression examples',
+        'cron expression tutorial',
+        'cron expression guide',
+        'learn cron expression',
+        'cron expression explained',
+        'cron expression meaning',
+        'cron expression format',
+        'cron expression syntax guide',
+        // Use case keywords
+        'schedule task cron',
+        'automate task cron',
+        'run script cron',
+        'schedule job cron',
+        'cron for backup',
+        'cron for email',
+        'cron for database',
+        'cron for maintenance',
+        'cron for cleanup',
+        'cron for reports',
+        // Platform-specific
+        'cron for linux',
+        'cron for unix',
+        'cron for mac',
+        'cron for server',
+        'cron for web server',
+        'cron for apache',
+        'cron for nginx',
+        'cron for nodejs',
+        'cron for python',
+        'cron for php',
+        // Advanced keywords
+        'cron expression tester',
+        'cron expression checker',
+        'verify cron expression',
+        'test cron expression',
+        'cron expression validator online',
+        'cron expression parser',
+        'cron expression decoder',
+        'cron expression interpreter',
+        'cron expression calculator',
+        'cron expression converter',
+        'cron expression editor',
+        'cron expression designer',
+        // Additional variations
+        'cronjob generator',
+        'cron job creator',
+        'cron job builder',
+        'cron job maker',
+        'cron job scheduler',
+        'crontab builder',
+        'crontab generator',
+        'crontab creator',
+        'crontab maker',
+        'crontab editor',
+        'schedule builder',
+        'task scheduler tool',
+        'job scheduler',
+        'automation scheduler',
+        'time-based scheduler'
+    ].join(', '),
+    authors: [
+        {
+            name: 'Cron Generator Team'
+        }
+    ],
+    creator: 'Cron Generator Online',
+    publisher: 'Cron Generator Online',
+    robots: {
+        index: true,
+        follow: true,
+        googleBot: {
+            index: true,
+            follow: true,
+            'max-video-preview': -1,
+            'max-image-preview': 'large',
+            'max-snippet': -1
+        }
+    },
     openGraph: {
-        title: 'Best Online Cron Generator',
-        description: 'Generate and validate cron expressions easily.',
-        type: 'website'
+        type: 'website',
+        locale: 'en_US',
+        url: baseUrl,
+        siteName: siteName,
+        title: defaultTitle,
+        description: defaultDescription,
+        images: [
+            {
+                url: `${baseUrl}/og-image.png`,
+                width: 1200,
+                height: 630,
+                alt: 'Cron Generator Online - Free Cron Expression Builder'
+            }
+        ]
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: defaultTitle,
+        description: defaultDescription,
+        images: [
+            `${baseUrl}/og-image.png`
+        ],
+        creator: '@crongenerator',
+        site: '@crongenerator'
+    },
+    alternates: {
+        canonical: baseUrl
+    },
+    category: 'Developer Tools',
+    classification: 'Web Application',
+    other: {
+        'apple-mobile-web-app-capable': 'yes',
+        'apple-mobile-web-app-status-bar-style': 'default',
+        'apple-mobile-web-app-title': siteName,
+        'mobile-web-app-capable': 'yes',
+        'theme-color': '#6366f1',
+        'color-scheme': 'dark light'
+    },
+    icons: {
+        icon: '/favicon.ico',
+        apple: '/apple-touch-icon.png'
+    },
+    manifest: '/manifest.json',
+    viewport: {
+        width: 'device-width',
+        initialScale: 1,
+        maximumScale: 5
+    },
+    formatDetection: {
+        telephone: false
     }
 };
 function RootLayout({ children }) {
@@ -355,7 +564,7 @@ function RootLayout({ children }) {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Header$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 25,
+                    lineNumber: 126,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -367,23 +576,23 @@ function RootLayout({ children }) {
                     children: children
                 }, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 26,
+                    lineNumber: 127,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Footer$2e$tsx__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/app/layout.tsx",
-                    lineNumber: 29,
+                    lineNumber: 130,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/app/layout.tsx",
-            lineNumber: 24,
+            lineNumber: 125,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/app/layout.tsx",
-        lineNumber: 23,
+        lineNumber: 124,
         columnNumber: 5
     }, this);
 }

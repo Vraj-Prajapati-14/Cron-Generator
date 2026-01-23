@@ -28,8 +28,8 @@ export default function Footer() {
             <div className={styles.container}>
                 <div className={styles.grid}>
                     <div className={styles.brandSection}>
-                        <Link href="/" className={styles.logo}>
-                            <Clock size={24} />
+                        <Link href="/" className={styles.logo} aria-label="Cron Generator Online - Home">
+                            <Clock size={24} aria-hidden="true" />
                             <span>Cron Pro</span>
                         </Link>
                         <p className={styles.description}>
@@ -37,44 +37,44 @@ export default function Footer() {
                         </p>
                     </div>
 
-                    <div className={styles.linksSection}>
-                        <h4 className={styles.linksTitle}>Product</h4>
-                        <ul className={styles.linksList}>
+                    <nav className={styles.linksSection} aria-labelledby="product-links">
+                        <h4 id="product-links" className={styles.linksTitle}>Product</h4>
+                        <ul className={styles.linksList} role="list">
                             {productLinks.map((link) => (
-                                <li key={link.href + link.label}>
-                                    <Link href={link.href} className={styles.link}>
+                                <li key={link.href + link.label} role="listitem">
+                                    <Link href={link.href} className={styles.link} aria-label={`Navigate to ${link.label}`}>
                                         {link.label}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </nav>
 
-                    <div className={styles.linksSection}>
-                        <h4 className={styles.linksTitle}>Resources</h4>
-                        <ul className={styles.linksList}>
+                    <nav className={styles.linksSection} aria-labelledby="resources-links">
+                        <h4 id="resources-links" className={styles.linksTitle}>Resources</h4>
+                        <ul className={styles.linksList} role="list">
                             {resourceLinks.map((link) => (
-                                <li key={link.href + link.label}>
-                                    <Link href={link.href} className={styles.link}>
+                                <li key={link.href + link.label} role="listitem">
+                                    <Link href={link.href} className={styles.link} aria-label={`Navigate to ${link.label}`}>
                                         {link.label}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </nav>
 
-                    <div className={styles.linksSection}>
-                        <h4 className={styles.linksTitle}>Legal</h4>
-                        <ul className={styles.linksList}>
+                    <nav className={styles.linksSection} aria-labelledby="legal-links">
+                        <h4 id="legal-links" className={styles.linksTitle}>Legal</h4>
+                        <ul className={styles.linksList} role="list">
                             {legalLinks.map((link) => (
-                                <li key={link.href}>
-                                    <Link href={link.href} className={styles.link}>
+                                <li key={link.href} role="listitem">
+                                    <Link href={link.href} className={styles.link} aria-label={`Navigate to ${link.label}`}>
                                         {link.label}
                                     </Link>
                                 </li>
                             ))}
                         </ul>
-                    </div>
+                    </nav>
                 </div>
 
                 <div className={styles.bottom}>

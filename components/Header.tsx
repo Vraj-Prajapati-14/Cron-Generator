@@ -19,26 +19,34 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          <Clock size={28} />
+        <Link href="/" className={styles.logo} aria-label="Cron Generator Online - Home">
+          <Clock size={28} aria-hidden="true" />
           <span>Cron Pro</span>
         </Link>
         
         <button 
           className={styles.menuButton}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          aria-label="Toggle menu"
+          aria-label="Toggle navigation menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
+          type="button"
         >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
 
-        <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
+        <nav 
+          id="main-navigation"
+          className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}
+          aria-label="Main navigation"
+        >
           {navLinks.map((link) => (
             <Link 
               key={link.href} 
               href={link.href} 
               className={styles.navLink}
               onClick={() => setIsMenuOpen(false)}
+              aria-label={`Navigate to ${link.label} page`}
             >
               {link.label}
             </Link>

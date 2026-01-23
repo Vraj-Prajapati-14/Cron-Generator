@@ -129,100 +129,147 @@ export default function CronTool() {
     };
 
     return (
-        <div className={styles.container}>
-            <div className={styles.toolbar}>
+        <section className={styles.container} aria-label="Cron Expression Generator">
+            <div className={styles.toolbar} role="toolbar" aria-label="Cron generator actions">
                 <div className={styles.actions}>
-                    <button onClick={handleClear} className="btn btn-secondary" title="Clear All">
-                        <Trash2 size={18} />
+                    <button 
+                        onClick={handleClear} 
+                        className="btn btn-secondary" 
+                        title="Clear All"
+                        aria-label="Clear all cron expression fields"
+                        type="button"
+                    >
+                        <Trash2 size={18} aria-hidden="true" />
+                        <span className="sr-only">Clear All</span>
                     </button>
-                    <button onClick={handleCopy} className="btn btn-primary" title="Copy Cron Expression">
-                        <Copy size={18} /> Copy
+                    <button 
+                        onClick={handleCopy} 
+                        className="btn btn-primary" 
+                        title="Copy Cron Expression"
+                        aria-label="Copy cron expression to clipboard"
+                        type="button"
+                    >
+                        <Copy size={18} aria-hidden="true" /> 
+                        <span>Copy</span>
                     </button>
                 </div>
             </div>
 
             <div className={styles.workspace}>
-                <div className={styles.builderSection}>
-                    <div className={styles.sectionTitle}>Cron Builder</div>
+                <div className={styles.builderSection} role="group" aria-labelledby="builder-title">
+                    <h2 id="builder-title" className={styles.sectionTitle}>Cron Builder</h2>
                     <div className={styles.fieldGroup}>
-                        <label className={styles.fieldLabel}>Minute (0-59)</label>
+                        <label htmlFor="minute-field" className={styles.fieldLabel}>Minute (0-59)</label>
                         <input
+                            id="minute-field"
                             type="text"
                             className={styles.fieldInput}
                             value={minute}
                             onChange={(e) => setMinute(e.target.value)}
                             placeholder="0"
+                            aria-describedby="minute-help"
+                            aria-label="Minute field for cron expression"
                         />
+                        <span id="minute-help" className="sr-only">Enter minute value from 0 to 59, or use * for every minute</span>
                     </div>
                     <div className={styles.fieldGroup}>
-                        <label className={styles.fieldLabel}>Hour (0-23)</label>
+                        <label htmlFor="hour-field" className={styles.fieldLabel}>Hour (0-23)</label>
                         <input
+                            id="hour-field"
                             type="text"
                             className={styles.fieldInput}
                             value={hour}
                             onChange={(e) => setHour(e.target.value)}
                             placeholder="0"
+                            aria-describedby="hour-help"
+                            aria-label="Hour field for cron expression"
                         />
+                        <span id="hour-help" className="sr-only">Enter hour value from 0 to 23, or use * for every hour</span>
                     </div>
                     <div className={styles.fieldGroup}>
-                        <label className={styles.fieldLabel}>Day of Month (1-31)</label>
+                        <label htmlFor="day-of-month-field" className={styles.fieldLabel}>Day of Month (1-31)</label>
                         <input
+                            id="day-of-month-field"
                             type="text"
                             className={styles.fieldInput}
                             value={dayOfMonth}
                             onChange={(e) => setDayOfMonth(e.target.value)}
                             placeholder="*"
+                            aria-describedby="day-of-month-help"
+                            aria-label="Day of month field for cron expression"
                         />
+                        <span id="day-of-month-help" className="sr-only">Enter day of month from 1 to 31, or use * for every day</span>
                     </div>
                     <div className={styles.fieldGroup}>
-                        <label className={styles.fieldLabel}>Month (1-12)</label>
+                        <label htmlFor="month-field" className={styles.fieldLabel}>Month (1-12)</label>
                         <input
+                            id="month-field"
                             type="text"
                             className={styles.fieldInput}
                             value={month}
                             onChange={(e) => setMonth(e.target.value)}
                             placeholder="*"
+                            aria-describedby="month-help"
+                            aria-label="Month field for cron expression"
                         />
+                        <span id="month-help" className="sr-only">Enter month value from 1 to 12, or use * for every month</span>
                     </div>
                     <div className={styles.fieldGroup}>
-                        <label className={styles.fieldLabel}>Day of Week (0-7, 0 or 7 = Sunday)</label>
+                        <label htmlFor="day-of-week-field" className={styles.fieldLabel}>Day of Week (0-7, 0 or 7 = Sunday)</label>
                         <input
+                            id="day-of-week-field"
                             type="text"
                             className={styles.fieldInput}
                             value={dayOfWeek}
                             onChange={(e) => setDayOfWeek(e.target.value)}
                             placeholder="*"
+                            aria-describedby="day-of-week-help"
+                            aria-label="Day of week field for cron expression"
                         />
+                        <span id="day-of-week-help" className="sr-only">Enter day of week from 0 to 7 (0 and 7 are Sunday), or use * for every day</span>
                     </div>
                 </div>
 
-                <div className={styles.inputSection}>
-                    <div className={styles.sectionTitle}>Cron Expression</div>
+                <div className={styles.inputSection} role="group" aria-labelledby="expression-title">
+                    <h2 id="expression-title" className={styles.sectionTitle}>Cron Expression</h2>
                     <input
                         type="text"
                         className={clsx(styles.cronInput, !isValid && styles.statusError)}
                         value={cronExpression}
                         onChange={(e) => handleExpressionChange(e.target.value)}
                         placeholder="0 0 * * *"
+                        aria-label="Cron expression input"
+                        aria-describedby="cron-status cron-description"
+                        aria-invalid={!isValid}
                     />
+                    <div id="cron-status" role="status" aria-live="polite" aria-atomic="true">
+                        {status.message && (
+                            <div className={clsx(styles.status, status.type === "error" ? styles.statusError : styles.statusSuccess)}>
+                                {status.type === "error" ? (
+                                    <>
+                                        <AlertTriangle size={18} style={{ display: 'inline', marginRight: 8 }} aria-hidden="true" />
+                                        <span>{status.message}</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <CheckCircle size={18} style={{ display: 'inline', marginRight: 8 }} aria-hidden="true" />
+                                        <span>{status.message}</span>
+                                    </>
+                                )}
+                            </div>
+                        )}
+                    </div>
 
-                    {status.message && (
-                        <div className={clsx(styles.status, status.type === "error" ? styles.statusError : styles.statusSuccess)}>
-                            {status.type === "error" ? <AlertTriangle size={18} style={{ display: 'inline', marginRight: 8 }} /> : <CheckCircle size={18} style={{ display: 'inline', marginRight: 8 }} />}
-                            {status.message}
-                        </div>
-                    )}
-
-                    <div className={styles.description}>
-                        <div className={styles.descriptionTitle}>
-                            <Clock size={18} style={{ display: 'inline', marginRight: 8, verticalAlign: 'middle' }} />
+                    <div id="cron-description" className={styles.description} role="region" aria-label="Cron expression description">
+                        <h3 className={styles.descriptionTitle}>
+                            <Clock size={18} style={{ display: 'inline', marginRight: 8, verticalAlign: 'middle' }} aria-hidden="true" />
                             Description
-                        </div>
-                        <div className={styles.descriptionText}>{getDescription(cronExpression)}</div>
+                        </h3>
+                        <div className={styles.descriptionText} aria-live="polite">{getDescription(cronExpression)}</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

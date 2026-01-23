@@ -2,16 +2,57 @@ import styles from '../Home.module.css';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | Cron Generator',
-  description: 'Terms of service for Cron Generator. Read our terms and conditions for using this tool.',
+  title: 'Terms of Service | Cron Generator - Terms & Conditions',
+  description: 'Terms of service for Cron Generator. Read our terms and conditions for using this free online cron generator tool. Understand your rights and responsibilities.',
+  keywords: [
+    'cron generator terms', 'cron tool terms of service', 'cron builder terms', 'cron generator terms and conditions',
+    'cron tool legal', 'cron generator legal terms', 'cron tool usage terms', 'cron builder terms of use',
+    'cron generator license', 'cron tool license', 'cron builder license', 'cron generator agreement',
+    'cron tool agreement', 'cron builder agreement', 'cron generator conditions', 'cron tool conditions',
+  ].join(', '),
   alternates: {
     canonical: 'https://www.crongenerator.online/terms',
+  },
+  openGraph: {
+    title: 'Terms of Service | Cron Generator',
+    description: 'Terms of service for Cron Generator. Read our terms and conditions for using this tool.',
+    url: 'https://www.crongenerator.online/terms',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
 export default function TermsPage() {
+  const baseUrl = 'https://www.crongenerator.online';
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: baseUrl,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Terms of Service',
+        item: `${baseUrl}/terms`,
+      },
+    ],
+  };
+
   return (
     <div className={styles.container}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <section className={styles.hero}>
         <h1 className={styles.title}>Terms of Service</h1>
         <p className={styles.subtitle}>
